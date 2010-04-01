@@ -1,0 +1,23 @@
+
+.showdown { 
+	overflow: auto;
+}
+
+.right form .showdown div.preview {
+	display: block;
+	background: white;
+	border: 1px solid #888;
+	padding: 0.25em;
+}
+
+.right form .showdown div.preview ol {
+}
+
+.right form .showdown div.preview, 
+.right form .showdown textarea {
+	height: 30em;
+	width: 48%;
+	float: left;
+	clear: none;
+	margin: 5px;
+}
