@@ -1,6 +1,6 @@
 
 .showdown { 
-	overflow: auto;
+	overflow: hidden;
 }
 
 .right form .showdown div.preview {
@@ -8,14 +8,12 @@
 	background: white;
 	border: 1px solid #888;
 	padding: 0.25em;
-}
-
-.right form .showdown div.preview ol {
+	overflow: auto;
 }
 
 .right form .showdown div.preview, 
 .right form .showdown textarea {
-	height: 30em;
+	height: 300px;
 	width: 48%;
 	float: left;
 	clear: none;
