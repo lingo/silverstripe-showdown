@@ -13,8 +13,7 @@ Behaviour.register({
 
 				 var timerID = 0;
 				 var previewFunction = function(e, elt) {
-					 if (timerID)
-					 	clearTimeout(timerID);
+					 clearTimeout(timerID);
 				 	 timerID = setTimeout(function() {
 						 //var prev = $(elt).siblings('iframe.preview');
 						 var prev = $('div.preview', $(elt).parents('div.showdown'));
@@ -23,9 +22,11 @@ Behaviour.register({
 						 text = converter.makeHtml(text);
 						 // console.log('prev=', prev, 'text=', text);
 						 // prev = $(prev[0].contentDocument.body);
-						 prev.html(text);
+						 $('div.content', prev).html(text);
 					 }, UPDATE_INTERVAL);
 				 }
+				 var prev = $('div.showdown div.preview');
+				 prev.resizable({handles: 's'});
 				 $('.showdown textarea').keyup(function(e) { return previewFunction(e, this); });
 			 })(jQuery);
 
