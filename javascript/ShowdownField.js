@@ -26,11 +26,13 @@ Behaviour.register({
 						 // prev = $(prev[0].contentDocument.body);
 						 //console.log(text);
 						 prev.children('div.content').html(text);
+						 prev.resizable({handles: 's'});
 					 }, UPDATE_INTERVAL);
 				 }
 				 var prev = $('div.showdown div.preview');
-				 prev.resizable({handles: 's'});
+				 //$('.showdown textarea').resizable({handles: 's'});
 				 $('.showdown textarea').keyup(function(e) { return previewFunction(e, this); });
+				 $('.showdown textarea').keyup();
 			 })(jQuery);
 
 		}
