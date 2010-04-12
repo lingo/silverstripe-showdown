@@ -13,8 +13,10 @@ Behaviour.register({
 
 				 var timerID = 0;
 				 var previewFunction = function(e, elt) {
+					 // console.log('clearing tid=', timerID);
 					 clearTimeout(timerID);
 				 	 timerID = setTimeout(function() {
+						 //console.log('running tid=', timerID);
 						 //var prev = $(elt).siblings('iframe.preview');
 						 var prev = $('div.preview', $(elt).parents('div.showdown'));
 						 // console.log(e, 'prev=', prev, 'conv=',converter);
@@ -22,7 +24,8 @@ Behaviour.register({
 						 text = converter.makeHtml(text);
 						 // console.log('prev=', prev, 'text=', text);
 						 // prev = $(prev[0].contentDocument.body);
-						 $('div.content', prev).html(text);
+						 //console.log(text);
+						 prev.children('div.content').html(text);
 					 }, UPDATE_INTERVAL);
 				 }
 				 var prev = $('div.showdown div.preview');
