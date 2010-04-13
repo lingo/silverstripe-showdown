@@ -9,7 +9,7 @@ Behaviour.register({
 			(function($){
 				 // build the converter
 				 var converter = new Showdown.converter();
-				 var UPDATE_INTERVAL = 300; // msec
+				 var UPDATE_INTERVAL = 150; // msec
 
 				 var timerID = 0;
 				 var previewFunction = function(e, elt) {
@@ -26,7 +26,7 @@ Behaviour.register({
 						 // prev = $(prev[0].contentDocument.body);
 						 //console.log(text);
 						 prev.children('div.content').html(text);
-						 prev.resizable({handles: 's'});
+						 //prev.resizable({handles: 's'});
 					 }, UPDATE_INTERVAL);
 				 }
 				 var prev = $('div.showdown div.preview');
@@ -34,9 +34,6 @@ Behaviour.register({
 				 $('.showdown textarea').keyup(function(e) { return previewFunction(e, this); });
 				 $('.showdown textarea').keyup();
 			 })(jQuery);
-
 		}
 	}
 });
- 
-
