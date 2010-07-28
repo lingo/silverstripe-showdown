@@ -1,10 +1,12 @@
 ## Usage ##
 
-Installing the module will override all HtmlTextFields with ShowdownTextField.
-To display the content correctly, you will also need to adjust the templates.
+Installing the module will override all HtmlTextFields with ShowdownTextField and will override $Content in templates to display correctly.
 
+To display other fields correctly on the front-end, you will need to adjust the templates manually.
+
+### Example ###
 **themes/THEME/templates/Layout/Page.ss**
 
-    $Content.Parse(MarkDown) 
+    $OtherField.Parse(MarkDown) 
 
 
