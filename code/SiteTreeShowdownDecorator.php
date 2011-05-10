@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * This decorates SiteTree, so that all HTMLEditorFields are replaced by ShowdownFields.
+ */
 class SiteTreeShowdownDecorator extends DataObjectDecorator {
 
 	public function updateCMSFields(&$fields) {
