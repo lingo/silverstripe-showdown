@@ -4,7 +4,7 @@ Installing the module will by default override all HtmlTextFields with ShowdownT
 
 However, you may edit the _config.php so that this does not occur; you may then simply use the ShowdownPage type.
 
-To display other fields correctly on the front-end, you will need to adjust the templates manually.
+To display fields other than _Content_ correctly on the front-end, you will need to adjust the templates manually.
 
 ### Example ###
 **themes/THEME/templates/Layout/Page.ss**
