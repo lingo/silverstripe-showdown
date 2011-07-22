@@ -1,5 +1,5 @@
 <?php
 
-Object::add_extension('SiteTree', 'SiteTreeShowdownDecorator');
+//Object::add_extension('SiteTree', 'SiteTreeShowdownDecorator');
 
 ?>
